@@ -1,11 +1,11 @@
-FROM alpine:latest
+FROM debian:latest
 
 MAINTAINER toughiq <toughIQ@gmail.com>
 
-RUN echo "http://dl-4.alpinelinux.org/alpine/edge/community/" >> /etc/apk/repositories 
-RUN apk add --update bash vim curl openssh openssl mysql-client ldns-tools jwhois \
-                     postgresql-client
-
+RUN apt-get update && apt-get upgrade -y \
+    && apt-get install -y curl wget mysql-client sysbench host net-tools python \
+    postgresql-client netcat \
+    && apt-get clean all && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /bin
 CMD ["ping","localhost"]
