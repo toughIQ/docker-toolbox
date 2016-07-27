@@ -1,2 +1,2 @@
 # docker-toolbox
-A small dockerbased Toolbox
+A small Alpine based Toolbox for Docker
