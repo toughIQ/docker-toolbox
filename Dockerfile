@@ -8,5 +8,5 @@ RUN apt-get update && apt-get upgrade -y \
     && apt-get clean all && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /bin
-CMD ["ping","localhost"]
+CMD ["sleep","infinity"]
 
