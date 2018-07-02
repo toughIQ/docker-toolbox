@@ -8,5 +8,5 @@ RUN apk add --update bash vim curl openssh openssl mysql-client ldns-tools jwhoi
 
 
 WORKDIR /bin
-CMD ["ping","localhost"]
+CMD ["sleep","3650d"]
 
